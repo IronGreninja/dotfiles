@@ -1,0 +1,7 @@
+call plug#begin('~/.vim/plug')
+
+ Plug 'preservim/nerdtree'
+ Plug 'farmergreg/vim-lastplace'
+ Plug 'jiangmiao/auto-pairs'
+
+call plug#end()
