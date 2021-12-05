@@ -10,6 +10,14 @@ set encoding=utf-8
 " Show line numbers
 set number
 
+
+" Enhance command-line completion
+set wildmenu
+
+
+" Optimize for fast terminal connections
+set ttyfast
+
 " Autoindent
 set autoindent
 
@@ -17,6 +25,8 @@ set autoindent
 set hlsearch
 " Does searches incrementally
 set incsearch
+" Ignore case of searches
+set ignorecase
 
 " Status bar
 set laststatus=2
@@ -31,12 +41,28 @@ set expandtab
 
 set fileformat=unix
 
-" filetype plugin on
+"Enable syntax highlighting 
 syntax on
+" Enable file type detection
+filetype on
+
+
+" Highlight current line
+set cursorline
 
 " Autocomplete ctrl+n to activate
 set wildmode=longest,list,full
 
+" Enable mouse in all modes
+" set mouse=a
+" Don’t show the intro message when starting Vim
+set shortmess=atI
+" Show the current mode
+set showmode
+" Show the filename in the window titlebar
+set title
+" Show the (partial) command as it’s being typed
+set showcmd
 " colorscheme
 colorscheme jellybeans
 
@@ -45,13 +71,13 @@ if filereadable(expand("~/.vimrc.plug"))
     source ~/.vimrc.plug
 endif
 
-" sets default clipboard
-set clipboard=unnamedplus
+" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+"set clipboard=unnamedplus
 
 " uncomment to prevent loading auto-pairs plugin
 " set runtimepath-=~/.vim/plug/auto-pairs
 
-" let NERDTreeRespectWildIgnore=1
+" hide file types in NERDTree
 let NERDTreeIgnore = ['\.class$']
 
 
