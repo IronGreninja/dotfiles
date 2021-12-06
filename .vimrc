@@ -29,7 +29,7 @@ set incsearch
 set ignorecase
 
 " Status bar
-set laststatus=2
+ set laststatus=2
 
 " Sets our tab size to 4 spaces
 set tabstop=4
@@ -60,11 +60,11 @@ set shortmess=atI
 " Show the current mode
 set showmode
 " Show the filename in the window titlebar
-set title
+" set title
 " Show the (partial) command as it’s being typed
 set showcmd
 " colorscheme
-colorscheme jellybeans
+colorscheme afterglow 
 
 " Call the .vimrc.plug file
 if filereadable(expand("~/.vimrc.plug"))
@@ -80,4 +80,6 @@ endif
 " hide file types in NERDTree
 let NERDTreeIgnore = ['\.class$']
 
-
+"Automatically displays all buffers when there's only one tab open.
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='alduin'
