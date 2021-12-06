@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 
-
+export PATH=$PATH:~/.local/bin
 
 
 ##-----------------------------------------------------
