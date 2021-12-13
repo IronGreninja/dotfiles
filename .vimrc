@@ -1,13 +1,9 @@
-"vim plugins
-call plug#begin('~/.vim/plug')
-
- Plug 'preservim/nerdtree'
- Plug 'farmergreg/vim-lastplace'
- Plug 'jiangmiao/auto-pairs'
- Plug 'vim-airline/vim-airline'
- Plug 'vim-airline/vim-airline-themes'
-
-call plug#end()
+"       _                    
+"__   _(_)_ __ ___  _ __ ___ 
+"\ \ / / | '_ ` _ \| '__/ __|
+" \ V /| | | | | | | | | (__ 
+"(_)_/ |_|_| |_| |_|_|  \___|
+"                            
 
 " Set compatibility to vim only
 set nocompatible
@@ -57,6 +53,11 @@ syntax on
 " Enable file type detection
 filetype on
 
+" For plug-ins to load correctly.
+filetype plugin indent on
+
+" Fixes common backspace problems
+set backspace=indent,eol,start
 
 " Highlight current line
 set cursorline
@@ -87,13 +88,26 @@ colorscheme afterglow
 "    source ~/.vimrc.plug
 "endif
 
-
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 "set clipboard=unnamedplus
 
 " uncomment to prevent loading auto-pairs plugin
 " set runtimepath-=~/.vim/plug/auto-pairs
 
+" ---------------PLUGINS--------------------
+"
+call plug#begin('~/.vim/plug')
+
+ Plug 'preservim/nerdtree'
+ Plug 'farmergreg/vim-lastplace'
+ Plug 'jiangmiao/auto-pairs'
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
+
+"---------- PLUGIN VARIABLES---------------
+"
 " hide file types in NERDTree
 let NERDTreeIgnore = ['\.class$']
 
@@ -102,3 +116,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 "Airline theme
 let g:airline_theme='alduin'
+
+"-----------NAVIGATION KEYMAPS-------------
+"
+
